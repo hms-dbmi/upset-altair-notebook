@@ -1,3 +1,9 @@
 .main-view {
-      padding-top: 30px
+      padding-top: 10px
+}
+
+#sort-by-frequency,
+#sort-by-degree {
+      padding-top:10px;
+      text-align: center;
 }

@@ -1,9 +1,37 @@
-.main-view {
+.wrapper{
+      max-width: 1200px;
+      margin: 0 auto;
+}
+
+.nav-view {
       padding-top: 10px
+}
+
+.main-view {
+      padding-top: 20px
+}
+
+.nav-item {
+      margin-left: 20px;
+      margin-right: 20px;
 }
 
 #sort-by-frequency,
 #sort-by-degree {
       padding-top:10px;
       text-align: center;
+}
+
+.jupyter-links {
+      font-size: 14px;     
+}
+.jupyter-link a:hover,
+.jupyter-link a:focus{
+      border: none !important;
+      border-color: "white" !important;;
+      background-color: none !important;
+}
+
+.github {
+      padding-top: 6px;
 }

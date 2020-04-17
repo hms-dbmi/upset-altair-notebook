@@ -8,6 +8,9 @@
 # testing
 /coverage
 
+# Jupyter Notebook
+.ipynb_checkpoints
+
 # production
 /build
 /build-demo

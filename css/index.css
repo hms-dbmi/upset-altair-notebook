@@ -38,13 +38,13 @@
     padding-top: 20px;
 }
 
-.external-source-view {
+.info-view {
     padding-left: 10px;
     padding-right: 10px;
     margin-bottom: 0px;
 }
 
-.external-source-view a {
+.info-view a {
     margin-left: 6px;
     font-weight: 400;
     border-bottom: 1px dotted gray;
@@ -52,7 +52,7 @@
     text-decoration: none;
 }
   
-.external-source-view a:hover {
+.info-view a:hover {
     font-weight: 400;
     border-bottom: 2px dotted black;
     color: #343a40;

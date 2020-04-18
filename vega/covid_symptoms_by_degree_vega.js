@@ -15,8 +15,8 @@ let upsetaltair_sort_by_degree_spec = {
       "subtitleFontSize": 14
     },
     "data": [
-      {"name": "selector088_store"},
-      {"name": "selector089_store"},
+      {"name": "selector091_store"},
+      {"name": "selector092_store"},
       {
         "name": "data-51a18922e537214846aa112d1ccd2e10",
         "values": [
@@ -1394,7 +1394,7 @@ let upsetaltair_sort_by_degree_spec = {
         "transform": [
           {
             "type": "filter",
-            "expr": "!(length(data(\"selector088_store\"))) || (vlSelectionTest(\"selector088_store\", datum))"
+            "expr": "!(length(data(\"selector091_store\"))) || (vlSelectionTest(\"selector091_store\", datum))"
           },
           {
             "type": "pivot",
@@ -1466,7 +1466,7 @@ let upsetaltair_sort_by_degree_spec = {
           },
           {
             "type": "filter",
-            "expr": "!(length(data(\"selector088_store\"))) || (vlSelectionTest(\"selector088_store\", datum))"
+            "expr": "!(length(data(\"selector091_store\"))) || (vlSelectionTest(\"selector091_store\", datum))"
           },
           {
             "type": "window",
@@ -1516,7 +1516,7 @@ let upsetaltair_sort_by_degree_spec = {
           },
           {
             "type": "filter",
-            "expr": "!(length(data(\"selector088_store\"))) || (vlSelectionTest(\"selector088_store\", datum))"
+            "expr": "!(length(data(\"selector091_store\"))) || (vlSelectionTest(\"selector091_store\", datum))"
           },
           {
             "type": "window",
@@ -1566,7 +1566,7 @@ let upsetaltair_sort_by_degree_spec = {
           },
           {
             "type": "filter",
-            "expr": "!(length(data(\"selector088_store\"))) || (vlSelectionTest(\"selector088_store\", datum))"
+            "expr": "!(length(data(\"selector091_store\"))) || (vlSelectionTest(\"selector091_store\", datum))"
           },
           {
             "type": "window",
@@ -1613,7 +1613,7 @@ let upsetaltair_sort_by_degree_spec = {
           },
           {
             "type": "filter",
-            "expr": "!(length(data(\"selector088_store\"))) || (vlSelectionTest(\"selector088_store\", datum))"
+            "expr": "!(length(data(\"selector091_store\"))) || (vlSelectionTest(\"selector091_store\", datum))"
           },
           {
             "type": "window",
@@ -1660,7 +1660,7 @@ let upsetaltair_sort_by_degree_spec = {
           },
           {
             "type": "filter",
-            "expr": "!(length(data(\"selector088_store\"))) || (vlSelectionTest(\"selector088_store\", datum))"
+            "expr": "!(length(data(\"selector091_store\"))) || (vlSelectionTest(\"selector091_store\", datum))"
           },
           {
             "type": "window",
@@ -1706,7 +1706,7 @@ let upsetaltair_sort_by_degree_spec = {
           },
           {
             "type": "filter",
-            "expr": "!(length(data(\"selector088_store\"))) || (vlSelectionTest(\"selector088_store\", datum))"
+            "expr": "!(length(data(\"selector091_store\"))) || (vlSelectionTest(\"selector091_store\", datum))"
           },
           {
             "type": "window",
@@ -1753,7 +1753,7 @@ let upsetaltair_sort_by_degree_spec = {
           },
           {
             "type": "filter",
-            "expr": "!(length(data(\"selector088_store\"))) || (vlSelectionTest(\"selector088_store\", datum))"
+            "expr": "!(length(data(\"selector091_store\"))) || (vlSelectionTest(\"selector091_store\", datum))"
           },
           {
             "type": "window",
@@ -1800,7 +1800,7 @@ let upsetaltair_sort_by_degree_spec = {
           },
           {
             "type": "filter",
-            "expr": "!(length(data(\"selector088_store\"))) || (vlSelectionTest(\"selector088_store\", datum))"
+            "expr": "!(length(data(\"selector091_store\"))) || (vlSelectionTest(\"selector091_store\", datum))"
           },
           {
             "type": "window",
@@ -1833,7 +1833,7 @@ let upsetaltair_sort_by_degree_spec = {
           },
           {
             "type": "filter",
-            "expr": "!(length(data(\"selector088_store\"))) || (vlSelectionTest(\"selector088_store\", datum))"
+            "expr": "!(length(data(\"selector091_store\"))) || (vlSelectionTest(\"selector091_store\", datum))"
           },
           {
             "type": "window",
@@ -1866,7 +1866,7 @@ let upsetaltair_sort_by_degree_spec = {
           },
           {
             "type": "filter",
-            "expr": "!(length(data(\"selector088_store\"))) || (vlSelectionTest(\"selector088_store\", datum))"
+            "expr": "!(length(data(\"selector091_store\"))) || (vlSelectionTest(\"selector091_store\", datum))"
           },
           {
             "type": "window",
@@ -1908,7 +1908,7 @@ let upsetaltair_sort_by_degree_spec = {
       {"name": "concat_1_concat_1_width", "value": 20},
       {"name": "concat_1_concat_2_width", "value": 200},
       {
-        "name": "selector088_set_legend",
+        "name": "selector091_set_legend",
         "value": null,
         "on": [
           {
@@ -1934,7 +1934,7 @@ let upsetaltair_sort_by_degree_spec = {
           },
           {
             "events": [{"source": "view", "type": "click"}],
-            "update": "!event.item || !datum ? null : selector088_set_legend",
+            "update": "!event.item || !datum ? null : selector091_set_legend",
             "force": true
           }
         ]
@@ -1947,12 +1947,12 @@ let upsetaltair_sort_by_degree_spec = {
         ]
       },
       {
-        "name": "selector088",
-        "update": "vlSelectionResolve(\"selector088_store\", \"union\", true)"
+        "name": "selector091",
+        "update": "vlSelectionResolve(\"selector091_store\", \"union\", true)"
       },
       {
-        "name": "selector089",
-        "update": "vlSelectionResolve(\"selector089_store\", \"union\")"
+        "name": "selector092",
+        "update": "vlSelectionResolve(\"selector092_store\", \"union\")"
       }
     ],
     "layout": {"padding": 20, "columns": 1, "bounds": "full", "align": "each"},
@@ -1968,13 +1968,13 @@ let upsetaltair_sort_by_degree_spec = {
           }
         },
         "signals": [
-          {"name": "selector088_tuple"},
+          {"name": "selector091_tuple"},
           {
-            "name": "selector088_tuple_fields",
+            "name": "selector091_tuple_fields",
             "value": [{"type": "E", "field": "set"}]
           },
           {
-            "name": "selector088_toggle",
+            "name": "selector091_toggle",
             "value": false,
             "on": [
               {
@@ -1984,20 +1984,20 @@ let upsetaltair_sort_by_degree_spec = {
             ]
           },
           {
-            "name": "selector088_modify",
+            "name": "selector091_modify",
             "on": [
               {
-                "events": {"signal": "selector088_tuple"},
-                "update": "modify(\"selector088_store\", selector088_toggle ? null : selector088_tuple, selector088_toggle ? null : true, selector088_toggle ? selector088_tuple : null)"
+                "events": {"signal": "selector091_tuple"},
+                "update": "modify(\"selector091_store\", selector091_toggle ? null : selector091_tuple, selector091_toggle ? null : true, selector091_toggle ? selector091_tuple : null)"
               }
             ]
           },
           {
-            "name": "selector089_tuple",
+            "name": "selector092_tuple",
             "on": [
               {
-                "events": [{"source": "scope", "type": "click"}],
-                "update": "datum && item().mark.marktype !== 'group' ? {unit: \"concat_0_layer_0\", fields: selector089_tuple_fields, values: [(item().isVoronoi ? datum.datum : datum)[\"intersection_id\"]]} : null",
+                "events": [{"source": "scope", "type": "mouseover"}],
+                "update": "datum && item().mark.marktype !== 'group' ? {unit: \"concat_0_layer_0\", fields: selector092_tuple_fields, values: [(item().isVoronoi ? datum.datum : datum)[\"intersection_id\"]]} : null",
                 "force": true
               },
               {
@@ -2007,15 +2007,15 @@ let upsetaltair_sort_by_degree_spec = {
             ]
           },
           {
-            "name": "selector089_tuple_fields",
+            "name": "selector092_tuple_fields",
             "value": [{"type": "E", "field": "intersection_id"}]
           },
           {
-            "name": "selector089_modify",
+            "name": "selector092_modify",
             "on": [
               {
-                "events": {"signal": "selector089_tuple"},
-                "update": "modify(\"selector089_store\", selector089_tuple, true)"
+                "events": {"signal": "selector092_tuple"},
+                "update": "modify(\"selector092_store\", selector092_tuple, true)"
               }
             ]
           }
@@ -2031,7 +2031,7 @@ let upsetaltair_sort_by_degree_spec = {
               "update": {
                 "fill": [
                   {
-                    "test": "!(length(data(\"selector089_store\"))) || (!(vlSelectionTest(\"selector089_store\", datum)))",
+                    "test": "!(length(data(\"selector092_store\"))) || (!(vlSelectionTest(\"selector092_store\", datum)))",
                     "value": "#3A3A3A"
                   },
                   {"value": "#EA4667"}
@@ -2061,7 +2061,7 @@ let upsetaltair_sort_by_degree_spec = {
                 "dy": {"value": -10},
                 "fill": [
                   {
-                    "test": "!(length(data(\"selector089_store\"))) || (!(vlSelectionTest(\"selector089_store\", datum)))",
+                    "test": "!(length(data(\"selector092_store\"))) || (!(vlSelectionTest(\"selector092_store\", datum)))",
                     "value": "#3A3A3A"
                   },
                   {"value": "#EA4667"}
@@ -2123,13 +2123,13 @@ let upsetaltair_sort_by_degree_spec = {
               }
             },
             "signals": [
-              {"name": "selector088_tuple"},
+              {"name": "selector091_tuple"},
               {
-                "name": "selector088_tuple_fields",
+                "name": "selector091_tuple_fields",
                 "value": [{"type": "E", "field": "set"}]
               },
               {
-                "name": "selector088_toggle",
+                "name": "selector091_toggle",
                 "value": false,
                 "on": [
                   {
@@ -2139,20 +2139,20 @@ let upsetaltair_sort_by_degree_spec = {
                 ]
               },
               {
-                "name": "selector088_modify",
+                "name": "selector091_modify",
                 "on": [
                   {
-                    "events": {"signal": "selector088_tuple"},
-                    "update": "modify(\"selector088_store\", selector088_toggle ? null : selector088_tuple, selector088_toggle ? null : true, selector088_toggle ? selector088_tuple : null)"
+                    "events": {"signal": "selector091_tuple"},
+                    "update": "modify(\"selector091_store\", selector091_toggle ? null : selector091_tuple, selector091_toggle ? null : true, selector091_toggle ? selector091_tuple : null)"
                   }
                 ]
               },
               {
-                "name": "selector089_tuple",
+                "name": "selector092_tuple",
                 "on": [
                   {
-                    "events": [{"source": "scope", "type": "click"}],
-                    "update": "datum && item().mark.marktype !== 'group' ? {unit: \"concat_1_concat_0_layer_0\", fields: selector089_tuple_fields, values: [(item().isVoronoi ? datum.datum : datum)[\"intersection_id\"]]} : null",
+                    "events": [{"source": "scope", "type": "mouseover"}],
+                    "update": "datum && item().mark.marktype !== 'group' ? {unit: \"concat_1_concat_0_layer_0\", fields: selector092_tuple_fields, values: [(item().isVoronoi ? datum.datum : datum)[\"intersection_id\"]]} : null",
                     "force": true
                   },
                   {
@@ -2162,15 +2162,15 @@ let upsetaltair_sort_by_degree_spec = {
                 ]
               },
               {
-                "name": "selector089_tuple_fields",
+                "name": "selector092_tuple_fields",
                 "value": [{"type": "E", "field": "intersection_id"}]
               },
               {
-                "name": "selector089_modify",
+                "name": "selector092_modify",
                 "on": [
                   {
-                    "events": {"signal": "selector089_tuple"},
-                    "update": "modify(\"selector089_store\", selector089_tuple, true)"
+                    "events": {"signal": "selector092_tuple"},
+                    "update": "modify(\"selector092_store\", selector092_tuple, true)"
                   }
                 ]
               }
@@ -2188,7 +2188,7 @@ let upsetaltair_sort_by_degree_spec = {
                     "size": {"value": 100},
                     "fill": [
                       {
-                        "test": "!(length(data(\"selector089_store\"))) || (!(vlSelectionTest(\"selector089_store\", datum)))",
+                        "test": "!(length(data(\"selector092_store\"))) || (!(vlSelectionTest(\"selector092_store\", datum)))",
                         "value": "#3A3A3A"
                       },
                       {"value": "#EA4667"}
@@ -2270,7 +2270,7 @@ let upsetaltair_sort_by_degree_spec = {
                   "update": {
                     "fill": [
                       {
-                        "test": "!(length(data(\"selector089_store\"))) || (!(vlSelectionTest(\"selector089_store\", datum)))",
+                        "test": "!(length(data(\"selector092_store\"))) || (!(vlSelectionTest(\"selector092_store\", datum)))",
                         "value": "#3A3A3A"
                       },
                       {"value": "#EA4667"}
@@ -2309,7 +2309,7 @@ let upsetaltair_sort_by_degree_spec = {
                     "size": {"value": 100},
                     "fill": [
                       {
-                        "test": "!(length(data(\"selector089_store\"))) || (!(vlSelectionTest(\"selector089_store\", datum)))",
+                        "test": "!(length(data(\"selector092_store\"))) || (!(vlSelectionTest(\"selector092_store\", datum)))",
                         "value": "#3A3A3A"
                       },
                       {"value": "#EA4667"}
@@ -2369,15 +2369,15 @@ let upsetaltair_sort_by_degree_spec = {
             "signals": [
               {"name": "width", "update": "concat_1_concat_1_width"},
               {
-                "name": "selector088_tuple",
-                "update": "selector088_set_legend !== null ? {fields: selector088_tuple_fields, values: [selector088_set_legend]} : null"
+                "name": "selector091_tuple",
+                "update": "selector091_set_legend !== null ? {fields: selector091_tuple_fields, values: [selector091_set_legend]} : null"
               },
               {
-                "name": "selector088_tuple_fields",
+                "name": "selector091_tuple_fields",
                 "value": [{"type": "E", "field": "set"}]
               },
               {
-                "name": "selector088_toggle",
+                "name": "selector091_toggle",
                 "value": false,
                 "on": [
                   {
@@ -2387,20 +2387,20 @@ let upsetaltair_sort_by_degree_spec = {
                 ]
               },
               {
-                "name": "selector088_modify",
+                "name": "selector091_modify",
                 "on": [
                   {
-                    "events": {"signal": "selector088_tuple"},
-                    "update": "modify(\"selector088_store\", selector088_toggle ? null : selector088_tuple, selector088_toggle ? null : true, selector088_toggle ? selector088_tuple : null)"
+                    "events": {"signal": "selector091_tuple"},
+                    "update": "modify(\"selector091_store\", selector091_toggle ? null : selector091_tuple, selector091_toggle ? null : true, selector091_toggle ? selector091_tuple : null)"
                   }
                 ]
               },
               {
-                "name": "selector089_tuple",
+                "name": "selector092_tuple",
                 "on": [
                   {
-                    "events": [{"source": "scope", "type": "click"}],
-                    "update": "datum && item().mark.marktype !== 'group' ? {unit: \"concat_1_concat_1_layer_0\", fields: selector089_tuple_fields, values: [(item().isVoronoi ? datum.datum : datum)[\"intersection_id\"]]} : null",
+                    "events": [{"source": "scope", "type": "mouseover"}],
+                    "update": "datum && item().mark.marktype !== 'group' ? {unit: \"concat_1_concat_1_layer_0\", fields: selector092_tuple_fields, values: [(item().isVoronoi ? datum.datum : datum)[\"intersection_id\"]]} : null",
                     "force": true
                   },
                   {
@@ -2410,15 +2410,15 @@ let upsetaltair_sort_by_degree_spec = {
                 ]
               },
               {
-                "name": "selector089_tuple_fields",
+                "name": "selector092_tuple_fields",
                 "value": [{"type": "E", "field": "intersection_id"}]
               },
               {
-                "name": "selector089_modify",
+                "name": "selector092_modify",
                 "on": [
                   {
-                    "events": {"signal": "selector089_tuple"},
-                    "update": "modify(\"selector089_store\", selector089_tuple, true)"
+                    "events": {"signal": "selector092_tuple"},
+                    "update": "modify(\"selector092_store\", selector092_tuple, true)"
                   }
                 ]
               }
@@ -2492,15 +2492,15 @@ let upsetaltair_sort_by_degree_spec = {
             },
             "signals": [
               {
-                "name": "selector088_tuple",
-                "update": "selector088_set_legend !== null ? {fields: selector088_tuple_fields, values: [selector088_set_legend]} : null"
+                "name": "selector091_tuple",
+                "update": "selector091_set_legend !== null ? {fields: selector091_tuple_fields, values: [selector091_set_legend]} : null"
               },
               {
-                "name": "selector088_tuple_fields",
+                "name": "selector091_tuple_fields",
                 "value": [{"type": "E", "field": "set"}]
               },
               {
-                "name": "selector088_toggle",
+                "name": "selector091_toggle",
                 "value": false,
                 "on": [
                   {
@@ -2510,20 +2510,20 @@ let upsetaltair_sort_by_degree_spec = {
                 ]
               },
               {
-                "name": "selector088_modify",
+                "name": "selector091_modify",
                 "on": [
                   {
-                    "events": {"signal": "selector088_tuple"},
-                    "update": "modify(\"selector088_store\", selector088_toggle ? null : selector088_tuple, selector088_toggle ? null : true, selector088_toggle ? selector088_tuple : null)"
+                    "events": {"signal": "selector091_tuple"},
+                    "update": "modify(\"selector091_store\", selector091_toggle ? null : selector091_tuple, selector091_toggle ? null : true, selector091_toggle ? selector091_tuple : null)"
                   }
                 ]
               },
               {
-                "name": "selector089_tuple",
+                "name": "selector092_tuple",
                 "on": [
                   {
-                    "events": [{"source": "scope", "type": "click"}],
-                    "update": "datum && item().mark.marktype !== 'group' ? {unit: \"concat_1_concat_2\", fields: selector089_tuple_fields, values: [(item().isVoronoi ? datum.datum : datum)[\"intersection_id\"]]} : null",
+                    "events": [{"source": "scope", "type": "mouseover"}],
+                    "update": "datum && item().mark.marktype !== 'group' ? {unit: \"concat_1_concat_2\", fields: selector092_tuple_fields, values: [(item().isVoronoi ? datum.datum : datum)[\"intersection_id\"]]} : null",
                     "force": true
                   },
                   {
@@ -2533,15 +2533,15 @@ let upsetaltair_sort_by_degree_spec = {
                 ]
               },
               {
-                "name": "selector089_tuple_fields",
+                "name": "selector092_tuple_fields",
                 "value": [{"type": "E", "field": "intersection_id"}]
               },
               {
-                "name": "selector089_modify",
+                "name": "selector092_modify",
                 "on": [
                   {
-                    "events": {"signal": "selector089_tuple"},
-                    "update": "modify(\"selector089_store\", selector089_tuple, true)"
+                    "events": {"signal": "selector092_tuple"},
+                    "update": "modify(\"selector092_store\", selector092_tuple, true)"
                   }
                 ]
               }
@@ -2709,7 +2709,7 @@ let upsetaltair_sort_by_degree_spec = {
             "update": {
               "opacity": [
                 {
-                  "test": "(!length(data(\"selector088_store\")) || (selector088[\"set\"] && indexof(selector088[\"set\"], datum.value) >= 0))",
+                  "test": "(!length(data(\"selector091_store\")) || (selector091[\"set\"] && indexof(selector091[\"set\"], datum.value) >= 0))",
                   "value": 1
                 },
                 {"value": 0.35}
@@ -2722,7 +2722,7 @@ let upsetaltair_sort_by_degree_spec = {
             "update": {
               "opacity": [
                 {
-                  "test": "(!length(data(\"selector088_store\")) || (selector088[\"set\"] && indexof(selector088[\"set\"], datum.value) >= 0))",
+                  "test": "(!length(data(\"selector091_store\")) || (selector091[\"set\"] && indexof(selector091[\"set\"], datum.value) >= 0))",
                   "value": 1
                 },
                 {"value": 0.35}

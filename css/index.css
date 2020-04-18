@@ -70,12 +70,12 @@
 }
 
 @media screen and (max-width: 576px) {
-    canvas {
+    /* canvas {
         max-width: 100%;
         max-height: 100%;
     } 
     .vis-view {
-        /* width: 476px; */
+        width: 476px;
         height: 366px;
-    }
+    } */
  }

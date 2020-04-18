@@ -1,37 +1,76 @@
-.wrapper{
-      max-width: 1200px;
-      margin: 0 auto;
+.navbar {
+    border-bottom: 3px solid black;
 }
 
 .nav-view {
-      padding-top: 10px
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
-.main-view {
-      padding-top: 20px
+.nav-tabs .nav-item.show .nav-link, 
+.nav-tabs .nav-link.active {
+    font-weight: 500;
 }
 
-.nav-item {
-      margin-left: 20px;
-      margin-right: 20px;
+.tab-content {
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    overflow: auto;
 }
 
 #sort-by-frequency,
 #sort-by-degree {
-      padding-top:10px;
-      text-align: center;
+    padding-top:10px;
+    text-align: center;
 }
 
-.jupyter-links {
-      font-size: 14px;     
-}
-.jupyter-link a:hover,
-.jupyter-link a:focus{
-      border: none !important;
-      border-color: "white" !important;;
-      background-color: none !important;
+.external-source-view-wrapper {
+    background-color: #F2F2F2;
+    /* border-top: 2px solid black; */
+    padding-top: 20px;
 }
 
-.github {
-      padding-top: 6px;
+.external-source-view {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0px;
 }
+
+.external-source-view a {
+    margin-left: 6px;
+    font-weight: 400;
+    border-bottom: 1px dotted gray;
+    color: #343a40;
+    text-decoration: none;
+}
+  
+.external-source-view a:hover {
+    font-weight: 400;
+    border-bottom: 2px dotted black;
+    color: #343a40;
+    text-decoration: none;
+}
+
+.row dt,
+.rot dd {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.row dt {
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width: 576px) {
+    body {
+        background-color: lightblue;
+    }
+    #upsetaltair-sort-by-frequency canvas,
+    #upsetaltair-sort-by-degree canvas {
+       width: 400px;
+    }
+ }

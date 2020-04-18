@@ -1,84 +1,188 @@
 <!doctype html>
 <html lang="en">
-      <head>
-            <!-- Required meta tags -->
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-            <!-- Bootstrap CSS -->
-            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-            
-            <!-- FontAwesome -->
-            <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-            <!-- Style -->
-            <link rel="stylesheet" href="./css/index.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-            <!-- My Vega Specs -->
-            <script type="text/javascript" src="./vega/covid_symptoms_by_frequency_vega.js"></script>
-            <script type="text/javascript" src="./vega/covid_symptoms_by_degree_vega.js"></script>
+    <!-- FontAwesome -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-            <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
-            <script src="https://cdn.jsdelivr.net/npm/vega@5.10.1"></script>
-            <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.10.4"></script>
-            <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.5.2"></script>
+    <!-- Style -->
+    <link rel="stylesheet" href="./css/index.css">
 
-            <title>Altair-based UpSets for COVID Symptoms</title>
-      </head>
-      <body>
-            <!-- <nav class="navbar navbar-dark bg-dark">
-                  <div class="container-fluid">
-                        <span class="navbar-brand mb-0 h1">COVID Symptom Visualization Using UpSet</span>
-                  </div>
-            </nav> -->
-            
-            <!-- original data -->
-            <!-- https://www.nature.com/articles/d41586-020-00154-w -->
+    <!-- My Vega Specs -->
+    <script type="text/javascript" src="./vega/covid_symptoms_by_frequency_vega.js"></script>
+    <script type="text/javascript" src="./vega/covid_symptoms_by_degree_vega.js"></script>
 
-            <div class="wrapper">
-                  <div class="container-fluid nav-view">
-                        <!-- justify-content-center -->
-                        <ul class="nav nav-tabs">
-                              <span class="navbar-brand mb-0 h1 text-wrap">COVID Symptom Visualization Using UpSet</span>
-                              <li class="nav-item ml-auto">
-                                    <a class="nav-link text-dark active" id="frequency-tab" data-toggle="tab" href="#sort-by-frequency">Sort by Frequency</a>
-                              </li>
-                              <li class="nav-item mr-auto">
-                                    <a class="nav-link text-dark" id="degree-tab" data-toggle="tab" href="#sort-by-degree">Sort by Degree</a>
-                              </li>
-                              <li class="nav-item jupyter-link ml-auto">
-                                    <a class="nav-link text-secondary" href="https://mybinder.org/v2/gh/hms-dbmi/upset-altair-notebook/master?filepath=UpSetAltair.ipynb">Launch Jupyter Notebook</a>
-                              </li>
-                              <li class="nav-item github mr-auto">
-                                    <a class="nav-text text-secondary" href="https://github.com/hms-dbmi/upset-altair-notebook" target="_blank" rel="noopener" aria-label="GitHub">
-                                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="navbar-nav-svg" viewBox="0 0 512 499.36" role="img">
-                                                <title>GitHub</title>
-                                                <path fill="currentColor" fill-rule="evenodd" d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z"></path>
-                                          </svg>
-                                    </a>
-                              </li> 
-                        </ul>
-                  </div>
-                  <div class="container-fluid main-view">
-                        <div class="tab-content">
-                              <div class="tab-pane fade show active" id="sort-by-frequency">
-                                    <div id="upsetaltair-sort-by-frequency"></div>
-                              </div>
-                              <div class="tab-pane fade" id="sort-by-degree">
-                                    <div id="upsetaltair-sort-by-degree"></div>
-                              </div>
-                        </div>
-                  </div>
+    <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.10.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.10.4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.5.2"></script>
+
+    <title>Altair-Based UpSet Plots for COVID Symptoms</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-xl">
+            <a class="navbar-brand h1 mb-0 pb-0" href="#">
+                Altair-Based UpSet Plots for COVID Symptoms
+            </a>
+            <span class="nav-item d-flex">
+                <!-- <a class="nav-link text-dark pr-0 pl-0" style="margin-top:1px;" href="https://mybinder.org/v2/gh/hms-dbmi/upset-altair-notebook/master?filepath=UpSetAltair.ipynb" rel="nofollow">
+                    <img src="https://camo.githubusercontent.com/483bae47a175c24dfbfc57390edd8b6982ac5fb3/68747470733a2f2f6d7962696e6465722e6f72672f62616467655f6c6f676f2e737667" alt="Binder" data-canonical-src="https://mybinder.org/badge_logo.svg" style="max-width:100%;">
+                </a> -->
+                <a class="nav-link text-dark pr-0 pl-0" style="margin-top:1px;"
+                    href="https://mybinder.org/v2/gh/hms-dbmi/upset-altair-notebook/master?filepath=UpSetAltair.ipynb">
+                    <svg role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24">
+                        <title>Jupyter Notebook</title>
+                        <path fill="#F37726" d="M12.2 18.1c-3.8 0-7.2-1.4-9-3.4.7 1.8 1.9 3.4 3.5 4.5s3.5 1.7 5.5 1.7 3.9-.6 5.5-1.7 2.8-2.7 3.5-4.5c-1.8 2-5.2 3.4-9 3.4zM12.2 4.9c3.8 0 7.2 1.4 9 3.4-.7-1.8-1.9-3.4-3.5-4.5C16 2.6 14.1 2 12.2 2c-2 0-3.9.6-5.5 1.7-1.6 1.2-2.8 2.7-3.5 4.6 1.8-2.1 5.1-3.4 9-3.4zM19.2.10000000000000009A1.4 1.4 0 1 0 19.2 2.9 1.4 1.4 0 1 0 19.2.10000000000000009zM5.1 20.3A1.8 1.8 0 1 0 5.1 23.900000000000002 1.8 1.8 0 1 0 5.1 20.3zM3.6 2.3A1 1 0 1 0 3.6 4.3 1 1 0 1 0 3.6 2.3z"/>
+                    </svg>
+                </a>
+                <a class="nav-link text-dark pr-0" 
+                    href="https://github.com/hms-dbmi/upset-altair-notebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24">
+                        <title>GitHub</title>
+                        <path fill="#24292F" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                    </svg>
+                </a>
+            </span>
+        </div>
+    </nav>
+
+    <div class="container-xl nav-view">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link text-dark active ml-0" id="frequency-tab" data-toggle="tab"
+                    href="#sort-by-frequency">Sort by Frequency</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" id="degree-tab" data-toggle="tab" href="#sort-by-degree">Sort by
+                    Degree</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="sort-by-frequency">
+                <div id="upsetaltair-sort-by-frequency"></div>
             </div>
+            <div class="tab-pane fade" id="sort-by-degree">
+                <div id="upsetaltair-sort-by-degree"></div>
+            </div>
+            <div>
+                <h5 class="text-muted">
+                    How To Use
+                </h5>
+                <p class="text-muted ml-2">
+                    <strong>• Interaction: </strong>Multiple symtoms can be selected by clicking on the legend on the top with the shift key.
+                </p>
+                <p class="text-muted ml-2">
+                    <strong>• Export: </strong>To download the figure, click the button with the ellipsis in the top right corner and choose either “Save as SVG” or “Save as PNG”. The figure will be saved reflecting the current state.
+                </p>
+            </div>
+        </div>
+    </div>
 
-            <script type="text/javascript">                  
-                  vegaEmbed('#upsetaltair-sort-by-frequency', upsetaltair_sort_by_frequency_spec);
-                  vegaEmbed('#upsetaltair-sort-by-degree', upsetaltair_sort_by_degree_spec);
-            </script>
+    <div class="container-fluid external-source-view-wrapper">
+        <div class="container-xl">
+            <dl class="row external-source-view">
+                <dt class="col-sm-3">Data & Story</dt>
+                <dd class="col-sm-9">
+                    <img src="https://www.nature.com/static/images/logos/nature-logo-40.21a62d60b0.svg" height="12px" style="margin-top: -1px;">
+                    </img>
+                    <a href="https://www.nature.com/articles/d41586-020-00154-w">Nature Article</a>
+                    <small>(title: <em>"Coronavirus latest: China death toll jumps dramatically")</em></small>
+                </dd>
+                <dt class="col-sm-3">Altair-based UpSets</dt>
+                <dd class="col-sm-9">
+                    <p>
+                        <svg 
+                            xmlns="http://www.w3.org/2000/svg" 
+                            
+                            width="24" 
+                            height="24"
+                            viewBox="0 0 24 24">
+                            <title>Jupyter Notebook</title>
+                            <path fill="#F37726" d="M12.2 18.1c-3.8 0-7.2-1.4-9-3.4.7 1.8 1.9 3.4 3.5 4.5s3.5 1.7 5.5 1.7 3.9-.6 5.5-1.7 2.8-2.7 3.5-4.5c-1.8 2-5.2 3.4-9 3.4zM12.2 4.9c3.8 0 7.2 1.4 9 3.4-.7-1.8-1.9-3.4-3.5-4.5C16 2.6 14.1 2 12.2 2c-2 0-3.9.6-5.5 1.7-1.6 1.2-2.8 2.7-3.5 4.6 1.8-2.1 5.1-3.4 9-3.4zM19.2.10000000000000009A1.4 1.4 0 1 0 19.2 2.9 1.4 1.4 0 1 0 19.2.10000000000000009zM5.1 20.3A1.8 1.8 0 1 0 5.1 23.900000000000002 1.8 1.8 0 1 0 5.1 20.3zM3.6 2.3A1 1 0 1 0 3.6 4.3 1 1 0 1 0 3.6 2.3z"/>
+                        </svg>
+                        <a href="https://mybinder.org/v2/gh/hms-dbmi/upset-altair-notebook/master?filepath=UpSetAltair.ipynb">Launch Jupyter Notebook</a>
+                        <small>(use your own data to generate custom Altair-based UpSet plots!)</small>
+                        <!-- <a href="https://mybinder.org/v2/gh/hms-dbmi/upset-altair-notebook/master?filepath=UpSetAltair.ipynb" style="margin-left: 3px;" rel="nofollow">
+                            <img src="https://camo.githubusercontent.com/483bae47a175c24dfbfc57390edd8b6982ac5fb3/68747470733a2f2f6d7962696e6465722e6f72672f62616467655f6c6f676f2e737667" alt="Binder" data-canonical-src="https://mybinder.org/badge_logo.svg" style="max-width:100%;">
+                        </a> -->
+                    </p>
+                    <p>
+                        <svg 
+                            xmlns="http://www.w3.org/2000/svg" 
+                            style="margin-bottom:3px" 
+                            width="22" 
+                            height="22"
+                            viewBox="0 0 24 24">
+                            <title>GitHub</title>
+                            <path fill="#24292F" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                        </svg>
+                        <a href="https://github.com/hms-dbmi/upset-altair-notebook">
+                            GitHub
+                        </a>
+                        <small>(source code)</small>
+                    </p>
+                </dd>
+            
+                <dt class="col-sm-3">Open Source Libraries</dt>
+                <dd class="col-sm-9">
+                    <p>
+                        <img src="http://caleydo.org/assets/images/logos/caleydo_c.svg" width="20px" height="20px" style="margin-top: -1px;">
+                        </img>
+                        <a href="http://caleydo.org/tools/upset/">UpSet</a>
+                        <small>(interactive set visualization for more than three sets)</small>
+                    </p>
+                    <p>
+                        <img src="http://caleydo.org/assets/images/logos/caleydo_c.svg" width="20px" height="20px" style="margin-top: -1px;">
+                        </img>
+                        <a href="https://github.com/hms-dbmi/UpSetR">UpSetR</a>
+                        <small>(R implementation of UpSet visualization)</small>
+                    </p>
+                    <p>
+                        <img src="https://altair-viz.github.io/_static/altair-logo-light.png" width="24px" height="24px" style="margin-top: -1px;">
+                        </img>
+                        <a href="https://altair-viz.github.io">Altair</a>
+                        <small>(declarative statistical visualization library for Python)</small>
+                    </p>
+                    <p>
+                        <img src="https://github.com/vega/logos/raw/master/assets/VG_Color@64.png?raw=true" width="20px" height="20px" style="margin-top: -1px;">
+                        </img>
+                        <a href="https://vega.github.io/vega/">Vega/Vega-Lite</a>
+                        <small>(visualization grammar for creating, saving, and sharing interactive visualization designs)</small>
+                    </p>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    
 
-            <!-- Bootstrap JS -->
-            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-      </body>
+    <script type="text/javascript">
+        vegaEmbed('#upsetaltair-sort-by-frequency', upsetaltair_sort_by_frequency_spec);
+        vegaEmbed('#upsetaltair-sort-by-degree', upsetaltair_sort_by_degree_spec);
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>

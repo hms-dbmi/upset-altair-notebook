@@ -15,8 +15,8 @@ let upsetaltair_sort_by_frequency_spec = {
       "subtitleFontSize": 14
     },
     "data": [
-      {"name": "selector004_store"},
-      {"name": "selector005_store"},
+      {"name": "selector011_store"},
+      {"name": "selector010_store"},
       {
         "name": "data-51a18922e537214846aa112d1ccd2e10",
         "values": [
@@ -1394,7 +1394,7 @@ let upsetaltair_sort_by_frequency_spec = {
         "transform": [
           {
             "type": "filter",
-            "expr": "!(length(data(\"selector004_store\"))) || (vlSelectionTest(\"selector004_store\", datum))"
+            "expr": "!(length(data(\"selector010_store\"))) || (vlSelectionTest(\"selector010_store\", datum))"
           },
           {
             "type": "pivot",
@@ -1466,7 +1466,7 @@ let upsetaltair_sort_by_frequency_spec = {
           },
           {
             "type": "filter",
-            "expr": "!(length(data(\"selector004_store\"))) || (vlSelectionTest(\"selector004_store\", datum))"
+            "expr": "!(length(data(\"selector010_store\"))) || (vlSelectionTest(\"selector010_store\", datum))"
           },
           {
             "type": "window",
@@ -1516,7 +1516,7 @@ let upsetaltair_sort_by_frequency_spec = {
           },
           {
             "type": "filter",
-            "expr": "!(length(data(\"selector004_store\"))) || (vlSelectionTest(\"selector004_store\", datum))"
+            "expr": "!(length(data(\"selector010_store\"))) || (vlSelectionTest(\"selector010_store\", datum))"
           },
           {
             "type": "window",
@@ -1566,7 +1566,7 @@ let upsetaltair_sort_by_frequency_spec = {
           },
           {
             "type": "filter",
-            "expr": "!(length(data(\"selector004_store\"))) || (vlSelectionTest(\"selector004_store\", datum))"
+            "expr": "!(length(data(\"selector010_store\"))) || (vlSelectionTest(\"selector010_store\", datum))"
           },
           {
             "type": "window",
@@ -1613,7 +1613,7 @@ let upsetaltair_sort_by_frequency_spec = {
           },
           {
             "type": "filter",
-            "expr": "!(length(data(\"selector004_store\"))) || (vlSelectionTest(\"selector004_store\", datum))"
+            "expr": "!(length(data(\"selector010_store\"))) || (vlSelectionTest(\"selector010_store\", datum))"
           },
           {
             "type": "window",
@@ -1660,7 +1660,7 @@ let upsetaltair_sort_by_frequency_spec = {
           },
           {
             "type": "filter",
-            "expr": "!(length(data(\"selector004_store\"))) || (vlSelectionTest(\"selector004_store\", datum))"
+            "expr": "!(length(data(\"selector010_store\"))) || (vlSelectionTest(\"selector010_store\", datum))"
           },
           {
             "type": "window",
@@ -1706,7 +1706,7 @@ let upsetaltair_sort_by_frequency_spec = {
           },
           {
             "type": "filter",
-            "expr": "!(length(data(\"selector004_store\"))) || (vlSelectionTest(\"selector004_store\", datum))"
+            "expr": "!(length(data(\"selector010_store\"))) || (vlSelectionTest(\"selector010_store\", datum))"
           },
           {
             "type": "window",
@@ -1753,7 +1753,7 @@ let upsetaltair_sort_by_frequency_spec = {
           },
           {
             "type": "filter",
-            "expr": "!(length(data(\"selector004_store\"))) || (vlSelectionTest(\"selector004_store\", datum))"
+            "expr": "!(length(data(\"selector010_store\"))) || (vlSelectionTest(\"selector010_store\", datum))"
           },
           {
             "type": "window",
@@ -1800,7 +1800,7 @@ let upsetaltair_sort_by_frequency_spec = {
           },
           {
             "type": "filter",
-            "expr": "!(length(data(\"selector004_store\"))) || (vlSelectionTest(\"selector004_store\", datum))"
+            "expr": "!(length(data(\"selector010_store\"))) || (vlSelectionTest(\"selector010_store\", datum))"
           },
           {
             "type": "window",
@@ -1833,7 +1833,7 @@ let upsetaltair_sort_by_frequency_spec = {
           },
           {
             "type": "filter",
-            "expr": "!(length(data(\"selector004_store\"))) || (vlSelectionTest(\"selector004_store\", datum))"
+            "expr": "!(length(data(\"selector010_store\"))) || (vlSelectionTest(\"selector010_store\", datum))"
           },
           {
             "type": "window",
@@ -1866,7 +1866,7 @@ let upsetaltair_sort_by_frequency_spec = {
           },
           {
             "type": "filter",
-            "expr": "!(length(data(\"selector004_store\"))) || (vlSelectionTest(\"selector004_store\", datum))"
+            "expr": "!(length(data(\"selector010_store\"))) || (vlSelectionTest(\"selector010_store\", datum))"
           },
           {
             "type": "window",
@@ -1908,7 +1908,7 @@ let upsetaltair_sort_by_frequency_spec = {
       {"name": "concat_1_concat_1_width", "value": 20},
       {"name": "concat_1_concat_2_width", "value": 200},
       {
-        "name": "selector004_set_legend",
+        "name": "selector010_set_legend",
         "value": null,
         "on": [
           {
@@ -1934,7 +1934,7 @@ let upsetaltair_sort_by_frequency_spec = {
           },
           {
             "events": [{"source": "view", "type": "click"}],
-            "update": "!event.item || !datum ? null : selector004_set_legend",
+            "update": "!event.item || !datum ? null : selector010_set_legend",
             "force": true
           }
         ]
@@ -1947,12 +1947,12 @@ let upsetaltair_sort_by_frequency_spec = {
         ]
       },
       {
-        "name": "selector004",
-        "update": "vlSelectionResolve(\"selector004_store\", \"union\", true)"
+        "name": "selector011",
+        "update": "vlSelectionResolve(\"selector011_store\", \"union\")"
       },
       {
-        "name": "selector005",
-        "update": "vlSelectionResolve(\"selector005_store\", \"union\")"
+        "name": "selector010",
+        "update": "vlSelectionResolve(\"selector010_store\", \"union\", true)"
       }
     ],
     "layout": {"padding": 20, "columns": 1, "bounds": "full", "align": "each"},
@@ -1968,36 +1968,12 @@ let upsetaltair_sort_by_frequency_spec = {
           }
         },
         "signals": [
-          {"name": "selector004_tuple"},
           {
-            "name": "selector004_tuple_fields",
-            "value": [{"type": "E", "field": "set"}]
-          },
-          {
-            "name": "selector004_toggle",
-            "value": false,
-            "on": [
-              {
-                "events": {"merge": [{"source": "view", "type": "click"}]},
-                "update": "event.shiftKey"
-              }
-            ]
-          },
-          {
-            "name": "selector004_modify",
-            "on": [
-              {
-                "events": {"signal": "selector004_tuple"},
-                "update": "modify(\"selector004_store\", selector004_toggle ? null : selector004_tuple, selector004_toggle ? null : true, selector004_toggle ? selector004_tuple : null)"
-              }
-            ]
-          },
-          {
-            "name": "selector005_tuple",
+            "name": "selector011_tuple",
             "on": [
               {
                 "events": [{"source": "scope", "type": "mouseover"}],
-                "update": "datum && item().mark.marktype !== 'group' ? {unit: \"concat_0_layer_0\", fields: selector005_tuple_fields, values: [(item().isVoronoi ? datum.datum : datum)[\"intersection_id\"]]} : null",
+                "update": "datum && item().mark.marktype !== 'group' ? {unit: \"concat_0_layer_0\", fields: selector011_tuple_fields, values: [(item().isVoronoi ? datum.datum : datum)[\"intersection_id\"]]} : null",
                 "force": true
               },
               {
@@ -2007,15 +1983,39 @@ let upsetaltair_sort_by_frequency_spec = {
             ]
           },
           {
-            "name": "selector005_tuple_fields",
+            "name": "selector011_tuple_fields",
             "value": [{"type": "E", "field": "intersection_id"}]
           },
           {
-            "name": "selector005_modify",
+            "name": "selector011_modify",
             "on": [
               {
-                "events": {"signal": "selector005_tuple"},
-                "update": "modify(\"selector005_store\", selector005_tuple, true)"
+                "events": {"signal": "selector011_tuple"},
+                "update": "modify(\"selector011_store\", selector011_tuple, true)"
+              }
+            ]
+          },
+          {"name": "selector010_tuple"},
+          {
+            "name": "selector010_tuple_fields",
+            "value": [{"type": "E", "field": "set"}]
+          },
+          {
+            "name": "selector010_toggle",
+            "value": false,
+            "on": [
+              {
+                "events": {"merge": [{"source": "view", "type": "click"}]},
+                "update": "event.shiftKey"
+              }
+            ]
+          },
+          {
+            "name": "selector010_modify",
+            "on": [
+              {
+                "events": {"signal": "selector010_tuple"},
+                "update": "modify(\"selector010_store\", selector010_toggle ? null : selector010_tuple, selector010_toggle ? null : true, selector010_toggle ? selector010_tuple : null)"
               }
             ]
           }
@@ -2031,7 +2031,7 @@ let upsetaltair_sort_by_frequency_spec = {
               "update": {
                 "fill": [
                   {
-                    "test": "!(length(data(\"selector005_store\"))) || (!(vlSelectionTest(\"selector005_store\", datum)))",
+                    "test": "!(length(data(\"selector011_store\"))) || (!(vlSelectionTest(\"selector011_store\", datum)))",
                     "value": "#3A3A3A"
                   },
                   {"value": "#777"}
@@ -2061,7 +2061,7 @@ let upsetaltair_sort_by_frequency_spec = {
                 "dy": {"value": -10},
                 "fill": [
                   {
-                    "test": "!(length(data(\"selector005_store\"))) || (!(vlSelectionTest(\"selector005_store\", datum)))",
+                    "test": "!(length(data(\"selector011_store\"))) || (!(vlSelectionTest(\"selector011_store\", datum)))",
                     "value": "#3A3A3A"
                   },
                   {"value": "#777"}
@@ -2123,36 +2123,12 @@ let upsetaltair_sort_by_frequency_spec = {
               }
             },
             "signals": [
-              {"name": "selector004_tuple"},
               {
-                "name": "selector004_tuple_fields",
-                "value": [{"type": "E", "field": "set"}]
-              },
-              {
-                "name": "selector004_toggle",
-                "value": false,
-                "on": [
-                  {
-                    "events": {"merge": [{"source": "view", "type": "click"}]},
-                    "update": "event.shiftKey"
-                  }
-                ]
-              },
-              {
-                "name": "selector004_modify",
-                "on": [
-                  {
-                    "events": {"signal": "selector004_tuple"},
-                    "update": "modify(\"selector004_store\", selector004_toggle ? null : selector004_tuple, selector004_toggle ? null : true, selector004_toggle ? selector004_tuple : null)"
-                  }
-                ]
-              },
-              {
-                "name": "selector005_tuple",
+                "name": "selector011_tuple",
                 "on": [
                   {
                     "events": [{"source": "scope", "type": "mouseover"}],
-                    "update": "datum && item().mark.marktype !== 'group' ? {unit: \"concat_1_concat_0_layer_0\", fields: selector005_tuple_fields, values: [(item().isVoronoi ? datum.datum : datum)[\"intersection_id\"]]} : null",
+                    "update": "datum && item().mark.marktype !== 'group' ? {unit: \"concat_1_concat_0_layer_0\", fields: selector011_tuple_fields, values: [(item().isVoronoi ? datum.datum : datum)[\"intersection_id\"]]} : null",
                     "force": true
                   },
                   {
@@ -2162,15 +2138,39 @@ let upsetaltair_sort_by_frequency_spec = {
                 ]
               },
               {
-                "name": "selector005_tuple_fields",
+                "name": "selector011_tuple_fields",
                 "value": [{"type": "E", "field": "intersection_id"}]
               },
               {
-                "name": "selector005_modify",
+                "name": "selector011_modify",
                 "on": [
                   {
-                    "events": {"signal": "selector005_tuple"},
-                    "update": "modify(\"selector005_store\", selector005_tuple, true)"
+                    "events": {"signal": "selector011_tuple"},
+                    "update": "modify(\"selector011_store\", selector011_tuple, true)"
+                  }
+                ]
+              },
+              {"name": "selector010_tuple"},
+              {
+                "name": "selector010_tuple_fields",
+                "value": [{"type": "E", "field": "set"}]
+              },
+              {
+                "name": "selector010_toggle",
+                "value": false,
+                "on": [
+                  {
+                    "events": {"merge": [{"source": "view", "type": "click"}]},
+                    "update": "event.shiftKey"
+                  }
+                ]
+              },
+              {
+                "name": "selector010_modify",
+                "on": [
+                  {
+                    "events": {"signal": "selector010_tuple"},
+                    "update": "modify(\"selector010_store\", selector010_toggle ? null : selector010_tuple, selector010_toggle ? null : true, selector010_toggle ? selector010_tuple : null)"
                   }
                 ]
               }
@@ -2188,7 +2188,7 @@ let upsetaltair_sort_by_frequency_spec = {
                     "size": {"value": 100},
                     "fill": [
                       {
-                        "test": "!(length(data(\"selector005_store\"))) || (!(vlSelectionTest(\"selector005_store\", datum)))",
+                        "test": "!(length(data(\"selector011_store\"))) || (!(vlSelectionTest(\"selector011_store\", datum)))",
                         "value": "#3A3A3A"
                       },
                       {"value": "#777"}
@@ -2270,7 +2270,7 @@ let upsetaltair_sort_by_frequency_spec = {
                   "update": {
                     "fill": [
                       {
-                        "test": "!(length(data(\"selector005_store\"))) || (!(vlSelectionTest(\"selector005_store\", datum)))",
+                        "test": "!(length(data(\"selector011_store\"))) || (!(vlSelectionTest(\"selector011_store\", datum)))",
                         "value": "#3A3A3A"
                       },
                       {"value": "#777"}
@@ -2309,7 +2309,7 @@ let upsetaltair_sort_by_frequency_spec = {
                     "size": {"value": 100},
                     "fill": [
                       {
-                        "test": "!(length(data(\"selector005_store\"))) || (!(vlSelectionTest(\"selector005_store\", datum)))",
+                        "test": "!(length(data(\"selector011_store\"))) || (!(vlSelectionTest(\"selector011_store\", datum)))",
                         "value": "#3A3A3A"
                       },
                       {"value": "#777"}
@@ -2369,15 +2369,15 @@ let upsetaltair_sort_by_frequency_spec = {
             "signals": [
               {"name": "width", "update": "concat_1_concat_1_width"},
               {
-                "name": "selector004_tuple",
-                "update": "selector004_set_legend !== null ? {fields: selector004_tuple_fields, values: [selector004_set_legend]} : null"
+                "name": "selector010_tuple",
+                "update": "selector010_set_legend !== null ? {fields: selector010_tuple_fields, values: [selector010_set_legend]} : null"
               },
               {
-                "name": "selector004_tuple_fields",
+                "name": "selector010_tuple_fields",
                 "value": [{"type": "E", "field": "set"}]
               },
               {
-                "name": "selector004_toggle",
+                "name": "selector010_toggle",
                 "value": false,
                 "on": [
                   {
@@ -2387,38 +2387,11 @@ let upsetaltair_sort_by_frequency_spec = {
                 ]
               },
               {
-                "name": "selector004_modify",
+                "name": "selector010_modify",
                 "on": [
                   {
-                    "events": {"signal": "selector004_tuple"},
-                    "update": "modify(\"selector004_store\", selector004_toggle ? null : selector004_tuple, selector004_toggle ? null : true, selector004_toggle ? selector004_tuple : null)"
-                  }
-                ]
-              },
-              {
-                "name": "selector005_tuple",
-                "on": [
-                  {
-                    "events": [{"source": "scope", "type": "mouseover"}],
-                    "update": "datum && item().mark.marktype !== 'group' ? {unit: \"concat_1_concat_1_layer_0\", fields: selector005_tuple_fields, values: [(item().isVoronoi ? datum.datum : datum)[\"intersection_id\"]]} : null",
-                    "force": true
-                  },
-                  {
-                    "events": [{"source": "scope", "type": "dblclick"}],
-                    "update": "null"
-                  }
-                ]
-              },
-              {
-                "name": "selector005_tuple_fields",
-                "value": [{"type": "E", "field": "intersection_id"}]
-              },
-              {
-                "name": "selector005_modify",
-                "on": [
-                  {
-                    "events": {"signal": "selector005_tuple"},
-                    "update": "modify(\"selector005_store\", selector005_tuple, true)"
+                    "events": {"signal": "selector010_tuple"},
+                    "update": "modify(\"selector010_store\", selector010_toggle ? null : selector010_tuple, selector010_toggle ? null : true, selector010_toggle ? selector010_tuple : null)"
                   }
                 ]
               }
@@ -2453,6 +2426,7 @@ let upsetaltair_sort_by_frequency_spec = {
                 "from": {"data": "data_16"},
                 "encode": {
                   "update": {
+                    "align": {"value": "center"},
                     "fill": {"value": "white"},
                     "opacity": {"value": 1},
                     "x": {"signal": "concat_1_concat_1_width", "mult": 0.5},
@@ -2462,7 +2436,6 @@ let upsetaltair_sort_by_frequency_spec = {
                       "band": 0.5
                     },
                     "text": {"signal": "''+datum[\"set_abbre\"]"},
-                    "align": {"value": "center"},
                     "baseline": {"value": "middle"}
                   }
                 }
@@ -2492,15 +2465,15 @@ let upsetaltair_sort_by_frequency_spec = {
             },
             "signals": [
               {
-                "name": "selector004_tuple",
-                "update": "selector004_set_legend !== null ? {fields: selector004_tuple_fields, values: [selector004_set_legend]} : null"
+                "name": "selector010_tuple",
+                "update": "selector010_set_legend !== null ? {fields: selector010_tuple_fields, values: [selector010_set_legend]} : null"
               },
               {
-                "name": "selector004_tuple_fields",
+                "name": "selector010_tuple_fields",
                 "value": [{"type": "E", "field": "set"}]
               },
               {
-                "name": "selector004_toggle",
+                "name": "selector010_toggle",
                 "value": false,
                 "on": [
                   {
@@ -2510,38 +2483,11 @@ let upsetaltair_sort_by_frequency_spec = {
                 ]
               },
               {
-                "name": "selector004_modify",
+                "name": "selector010_modify",
                 "on": [
                   {
-                    "events": {"signal": "selector004_tuple"},
-                    "update": "modify(\"selector004_store\", selector004_toggle ? null : selector004_tuple, selector004_toggle ? null : true, selector004_toggle ? selector004_tuple : null)"
-                  }
-                ]
-              },
-              {
-                "name": "selector005_tuple",
-                "on": [
-                  {
-                    "events": [{"source": "scope", "type": "mouseover"}],
-                    "update": "datum && item().mark.marktype !== 'group' ? {unit: \"concat_1_concat_2\", fields: selector005_tuple_fields, values: [(item().isVoronoi ? datum.datum : datum)[\"intersection_id\"]]} : null",
-                    "force": true
-                  },
-                  {
-                    "events": [{"source": "scope", "type": "dblclick"}],
-                    "update": "null"
-                  }
-                ]
-              },
-              {
-                "name": "selector005_tuple_fields",
-                "value": [{"type": "E", "field": "intersection_id"}]
-              },
-              {
-                "name": "selector005_modify",
-                "on": [
-                  {
-                    "events": {"signal": "selector005_tuple"},
-                    "update": "modify(\"selector005_store\", selector005_tuple, true)"
+                    "events": {"signal": "selector010_tuple"},
+                    "update": "modify(\"selector010_store\", selector010_toggle ? null : selector010_tuple, selector010_toggle ? null : true, selector010_toggle ? selector010_tuple : null)"
                   }
                 ]
               }
@@ -2709,7 +2655,7 @@ let upsetaltair_sort_by_frequency_spec = {
             "update": {
               "opacity": [
                 {
-                  "test": "(!length(data(\"selector004_store\")) || (selector004[\"set\"] && indexof(selector004[\"set\"], datum.value) >= 0))",
+                  "test": "(!length(data(\"selector010_store\")) || (selector010[\"set\"] && indexof(selector010[\"set\"], datum.value) >= 0))",
                   "value": 1
                 },
                 {"value": 0.35}
@@ -2722,7 +2668,7 @@ let upsetaltair_sort_by_frequency_spec = {
             "update": {
               "opacity": [
                 {
-                  "test": "(!length(data(\"selector004_store\")) || (selector004[\"set\"] && indexof(selector004[\"set\"], datum.value) >= 0))",
+                  "test": "(!length(data(\"selector010_store\")) || (selector010[\"set\"] && indexof(selector010[\"set\"], datum.value) >= 0))",
                   "value": 1
                 },
                 {"value": 0.35}

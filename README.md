@@ -18,6 +18,6 @@ cd notebooks
 Start Jupyter with the Python kernel:
 
 ```sh
-conda activate upset-altair
+conda activate upset-altair-env
 jupyter notebook
 ```

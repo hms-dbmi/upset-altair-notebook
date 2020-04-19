@@ -3,6 +3,7 @@
 Jupyter Notebooks for Altair-based Interactive UpSet Plots
 
 ## Development
+### Notebook
 Set up environments using Conda:
 
 ```sh

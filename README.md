@@ -3,16 +3,11 @@
 Jupyter Notebooks for Altair-based Interactive UpSet Plots
 
 ## Development
+### Notebook
 Set up environments using Conda:
 
 ```sh
 conda env create -f environment.yml
-```
-
-Enter the notebook directory:
-
-```sh
-cd notebooks
 ```
 
 Start Jupyter with the Python kernel:

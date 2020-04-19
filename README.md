@@ -9,12 +9,6 @@ Set up environments using Conda:
 conda env create -f environment.yml
 ```
 
-Enter the notebook directory:
-
-```sh
-cd notebooks
-```
-
 Start Jupyter with the Python kernel:
 
 ```sh

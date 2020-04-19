@@ -1,4 +1,4 @@
-name: upset-altair
+name: upset-altair-env
 channels:
   - conda-forge
   - bioconda

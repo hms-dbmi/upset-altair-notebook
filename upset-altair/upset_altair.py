@@ -22,7 +22,8 @@ def visualize(
     vertical_bar_label_size=16,
     vertical_bar_padding=20
 ): 
-    """This function generates Altair-based interactive UpSet plots.
+    """
+    This function generates Altair-based interactive UpSet plots.
     
     Parameters:
         - data (pandas.DataFrame): Tabular data containing the membership of each element (row) in 

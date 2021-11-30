@@ -9,6 +9,7 @@ dependencies:
   - pandas
   - requests
   - numpy
-  - altair
+  - altair=4.0.0
+  - jsonschema<=4.0
   - altair_saver
   - vega_datasets
